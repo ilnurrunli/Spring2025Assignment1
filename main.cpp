@@ -17,11 +17,12 @@ int main() {
         string name;
         cin >> id >> name;
 
-        Student student(id, name);
+        const Student student(id, name);
         myLms.addStudent(student);
     }
 
     int numberCourses;
+    cin >> numberCourses;
     for(int i = 0; i < numberCourses; i++) {
         string name;
         int credit, id;
@@ -43,7 +44,7 @@ int main() {
         Student* student = myLms.findStudentById(studentId);
         Course* course = myLms.findCourseById(courseId);
 
-        myLms.addStudentToCourse(*student, *course);
+        LMS::addStudentToCourse(*student, *course);
     }
     myLms.printDetails();
     return 0;

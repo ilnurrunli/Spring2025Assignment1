@@ -8,8 +8,13 @@
 #include "Course.h"
 using namespace std;
 
+Course::Course(int id, string name, int credits) {
+    this->id = id;
+    this->name = name;
+    this->credits = credits;
+}
 
-bool Course::hasStudent(Student student) {
+bool Course::hasStudent(const Student& student) {
     if(
         find(
             this->students.begin(),
@@ -22,12 +27,12 @@ bool Course::hasStudent(Student student) {
     return false;
 }
 
-bool Course::addStudent(Student student) {
+bool Course::addStudent(const Student& student) {
     this->students.push_back(student.getId());
     return true;
 }
 
-void Course::dropStudent(Student student) {
+void Course::dropStudent(const Student& student) {
     this->students.erase(
         remove(this->students.begin(), this->students.end(), student.getId()),
         this->students.end()

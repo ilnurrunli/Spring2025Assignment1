@@ -3,11 +3,16 @@
 //
 
 #include <iostream>
+#include <utility>
 #include <vector>
 #include <algorithm>
 #include "Course.h"
 using namespace std;
 
+Student::Student(int sid, string name) {
+    this->sid = sid;
+    this->name = std::move(name);
+}
 
 bool Student::takesCourse(Course course) {
     // looking for an id, in order to find the course

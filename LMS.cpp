@@ -4,8 +4,13 @@
 
 #include <iostream>
 #include <algorithm>
+#include <utility>
 #include "LMS.h"
 using namespace std;
+
+LMS::LMS(string name) {
+    this->name = std::move(name);
+}
 
 void LMS::addStudent(Student student) {
     students.push_back(student);
