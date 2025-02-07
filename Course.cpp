@@ -62,3 +62,7 @@ int Course::getCredits() const {
     return this->credits;
 }
 
+vector<int> Course::getStudents() const {
+    return this->students;
+}
+

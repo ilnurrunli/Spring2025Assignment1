@@ -23,7 +23,7 @@ public:
     void addStudent(Student student);
     void addCourse(Course course);
 
-    static void addStudentToCourse(Student student, Course course);
+    static void addStudentToCourse(Student& student, Course& course);
     void printDetails();
 
     Student *findStudentById(int searchId);

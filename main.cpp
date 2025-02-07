@@ -17,7 +17,7 @@ int main() {
         string name;
         cin >> id >> name;
 
-        const Student student(id, name);
+        Student student(id, name);
         myLms.addStudent(student);
     }
 
@@ -39,8 +39,6 @@ int main() {
         int courseId;
         cin >> studentId >> courseId;
 
-        vector<Student> students = myLms.getStudents();
-        vector<Course> courses = myLms.getCourses();
         Student* student = myLms.findStudentById(studentId);
         Course* course = myLms.findCourseById(courseId);
 

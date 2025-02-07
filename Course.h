@@ -30,6 +30,7 @@ public:
     int getId() const;
     string getName() const;
     int getCredits() const;
+    vector<int> getStudents() const;
 };
 
 #endif // COURSE_H

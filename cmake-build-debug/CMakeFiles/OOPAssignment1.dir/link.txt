@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/OOPAssignment1.dir/main.cpp.o CMakeFiles/OOPAssignment1.dir/Student.cpp.o CMakeFiles/OOPAssignment1.dir/Course.cpp.o CMakeFiles/OOPAssignment1.dir/LMS.cpp.o -o OOPAssignment1

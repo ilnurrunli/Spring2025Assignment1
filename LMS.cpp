@@ -20,7 +20,7 @@ void LMS::addCourse(Course course) {
     courses.push_back(course);
 }
 
-void LMS::addStudentToCourse(Student student, Course course) {
+void LMS::addStudentToCourse(Student& student, Course& course) {
     if(!student.takesCourse(course)) {
         student.takeCourse(course);
     }
@@ -38,16 +38,20 @@ vector<Course> LMS::getCourses() const {
 }
 
 void LMS::printDetails() {
-    cout << "LMS name: " << name << endl;
+    cout << "LMS Name: " << name << endl;
     cout << "Students: " << endl;
     for(Student student : students) {
-        cout << "   " << "Name: " << student.getName() << " " << "Id: " << student.getId() << endl;
+        cout << "StudentID: " << student.getId() << ", Name: " << student.getName() << endl;
     }
     cout << "Courses: " << endl;
     for(Course course : courses) {
-        cout << "   " << "Name: "<< course.getName() << " "
-        << "Id: " << course.getId() << " "
-        << "Credits: " << course.getCredits()<<endl;
+        cout << "Course ID: " << course.getId() << ", Name: "<< course.getName()
+        << ", Credits: " << course.getCredits() << endl;
+        cout << "Enrolled Students: ";
+        for (int sid : course.getStudents()) {
+            cout << sid << " ";
+        }
+        cout << endl;
     }
 }
 
