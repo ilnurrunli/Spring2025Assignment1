@@ -44,7 +44,7 @@ void LMS::printDetails() {
         cout << "Student ID: " << student.getId() << ", Name: " << student.getName() << endl;
         cout << "Enrolled Courses: " << student.getEnrolledCourses()[0] << " " << endl;
     }
-    cout << "Courses: " << endl;
+    cout << "Courses:" << endl;
     for(Course course : courses) {
         cout << "Course ID: " << course.getId() << ", Name: "<< course.getName()
         << ", Credits: " << course.getCredits() << endl;
