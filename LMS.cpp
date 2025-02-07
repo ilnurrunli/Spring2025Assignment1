@@ -39,9 +39,10 @@ vector<Course> LMS::getCourses() const {
 
 void LMS::printDetails() {
     cout << "LMS Name: " << name << endl;
-    cout << "Students: " << endl;
+    cout << "Students:" << endl;
     for(Student student : students) {
-        cout << "StudentID: " << student.getId() << ", Name: " << student.getName() << endl;
+        cout << "Student ID: " << student.getId() << ", Name: " << student.getName() << endl;
+        cout << "Enrolled Courses: " << student.getEnrolledCourses()[0] << " " << endl;
     }
     cout << "Courses: " << endl;
     for(Course course : courses) {
